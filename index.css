@@ -34,7 +34,7 @@ ul {
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
-    background-size: 1400px 1000px;
+    background-size: cover;
     max-height: 900px;
     min-height: 300px;
     height: 400px;
