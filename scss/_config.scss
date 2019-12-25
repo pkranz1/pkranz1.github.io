@@ -1,0 +1,53 @@
+$primary-color: #2c2c2c;
+$secondary-color: #ff3d00;
+$show-home-image: true;
+$home-image: url("../images/blurredStreet.jpg");
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 0.35s ease-out;
+}
+
+//set text color
+@function set-text-color($color) {
+  @if(lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#body-image {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
+
+//Media Query Mixins
+@mixin small {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin x-large {
+  @media screen and (max-width: 1171px) {
+    @content;
+  }
+}
