@@ -1,3 +1,4 @@
+//navbar code
 //select DOM items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -28,3 +29,5 @@ function toggleMenu() {
 
   showMenu = !showMenu;
 }
+
+//projects code
